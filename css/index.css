@@ -31,6 +31,13 @@
 }
 
 @font-face {
+  font-family: 'ProximaNovaCond';
+  src: url('../fonts/ProximaNovaCond-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaCond-Black.otf')  format('opentype'), url('../fonts/ProximaNovaCond-Black.woff') format('woff'), url('../fonts/ProximaNovaCond-Black.ttf')  format('truetype'), url('../fonts/ProximaNovaCond-Black.svg#ProximaNovaCond-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'ProximaNovaExCn';
   src: url('../fonts/ProximaNovaExCn-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNovaExCn-Regular.otf')  format('opentype'),
 	     url('../fonts/ProximaNovaExCn-Regular.woff') format('woff'), url('../fonts/ProximaNovaExCn-Regular.ttf')  format('truetype'), url('../fonts/ProximaNovaExCn-Regular.svg#ProximaNovaExCn-Regular') format('svg');
@@ -94,7 +101,7 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 15px 0;
+    padding: 16px 0;
     position: absolute;
     right: 0;
     left: 0;
@@ -143,9 +150,10 @@ header .submenu {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 52px;
+    top: 66px;
     left: 0;
     display: none;
+    z-index: 1;
 }
 
 header .menu li:hover .submenu {
@@ -155,6 +163,8 @@ header .menu li:hover .submenu {
 header .submenu li {
     position: relative;
     transition: all .2s linear 0s;
+    margin-bottom: 2px;
+    width: 230px;
 }
 
 header .submenu li a {
@@ -162,13 +172,12 @@ header .submenu li a {
     box-sizing: border-box;
     border-left: 4px solid rgb(255, 222, 0);
     background-color: rgba(255, 255, 255, 0.949);
-    font-size: 20px;
-    font-family: "ProximaNovaExCn";
+    font: 400 20px "ProximaNovaExCn";
     color: rgb(0, 0, 0);
     text-transform:none;
     text-decoration: none;
-    text-align: center;
     padding: 15px;
+    width: 100%;
 }
 
 .burger_wrapper {
@@ -270,7 +279,7 @@ header .button {
 .main_screen {
     background: url(../images/main_screen_bg.jpg) no-repeat center;
     background-size: cover;
-    padding: 143px 0 62px;
+    padding: 136px 0 62px;
 }
 
 .main_screen .wrapper {
@@ -285,7 +294,13 @@ header .button {
 }
 
 .main_screen .services {
-    margin: 38px 0 50px;
+    margin: 38px -10px 45px;
+}
+
+.main_screen .service_wr {
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .main_screen .service {
@@ -295,9 +310,8 @@ header .button {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration: none;
-    height: 63px;
+    height: 70px;
     padding-left: 80px;
-    margin-right: 10px;
 }
 
 .main_screen .service .icon {
@@ -379,15 +393,15 @@ header .button {
     box-sizing: border-box;
     border: 1px solid rgb(217, 217, 217);
     border-radius: 5px;
-    height: 62px;
+    height: 60px;
     width: 100%;
     font-size: 20px;
-    font-family: "ProximaNovaExCn";
-    font-weight: 400;
-    color: rgb(131, 131, 131);
+    font-family: "ProximaNova";
+    font-weight: 700;
+    letter-spacing: 0.6px;
     text-transform: uppercase;
     outline: none;
-    padding: 10px 20px;
+    padding: 0 20px;
 }
 
 .form input:not([type=submit]):focus {
@@ -421,20 +435,22 @@ header .button {
 }
 
 .prices_screen .advantages {
-    width: 460px;
-    margin: 0 -15px;
+    max-width: 430px;
+    margin: -15px;
 }
 
 .prices_screen .advantage {
-    position: relative;
-    padding: 0 15px 30px;
+    position: relative;    
+    width: 50%;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 .framed::before {
     content: "";
     position: absolute;
-    width: 169px;
-    height: 33px;
+    width: calc(100% - 15px);
+    height: 15%;
     top: 0;
     left: 0;
     border-top: 8px solid #ffde00;
@@ -445,8 +461,8 @@ header .button {
 .framed::after {
     content: "";
     position: absolute;
-    width: 169px;
-    height: 33px;
+    width: calc(100% - 15px);
+    height: 15%;
     bottom: 0;
     left: 0;
     border-right: 8px solid #ffde00;
@@ -459,7 +475,6 @@ header .button {
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    width: 185px;
     height: 210px;
     color: rgb(71, 71, 71);
     text-transform: uppercase;
@@ -467,51 +482,67 @@ header .button {
     padding: 10px;
 }
 
+.prices_screen .term .advantage_wr, .prices_screen .shedule .advantage_wr {
+    
+}
+
+.prices_screen .projects  {
+    width: 100%;
+}
+
 .prices_screen .projects .advantage_wr {
-    width: 400px;
     height: 165px;
+}
+
+.prices_screen .advantage .inner {
+    margin: auto;
 }
 
 .prices_screen .number {
     font: 900 90px "ProximaNovaCond";
     color: rgb(255, 204, 0);
+    line-height: 0.8;
 }
 
 .prices_screen .after_number {
-  font: 900 26px "ProximaNovaCond";
+    font: 900 26px "ProximaNovaCond";
+    padding-top: 5px;
 }
 
 .prices_screen .remark {
     font: 400 14px "ProximaNovaCond";
+    padding-top: 5px;
 }
 
 .prices_screen .advantage .icon {
     background-image: url(../images/sprites.svg);
-    background-position: -10px -110px;
+    background-position: -6px -107px;
 	width: 70px;
 	height: 70px;
     margin: 0 auto;
 }
 
 .prices_screen .advantage.term .icon {
-    background-position: -150px -110px;
+    background-position: -146px -107px;
 }
 
 .prices_screen .advantage.contract .icon {
-    background-position: -296px -110px;
+    background-position: -292px -107px;
 }
 
 .prices_screen .after_icon {
     font-size: 14px;
     color: rgb(0, 0, 0);
     max-width: 135px;
+    padding-top: 15px;
 }
 
-.prices_screen  .price_list {
+.prices_screen .price_list {
     flex: 1;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 42px 58px;
+    margin-left: 63px;
 }
 
 .caption {
@@ -579,7 +610,104 @@ header .button {
 
 .services_screen {
     background: #f7f7f7; 
-    padding: 50px 0;
+    padding: 62px 0;
+}
+
+.services_screen .wrapper {
+    flex-wrap: nowrap;
+}
+
+.services_screen .carousel{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+    width: 47.5%;
+}
+
+.services_screen .carousel .carousel_wr{
+    overflow: hidden;
+    margin: 0 -40px;
+}
+.services_screen .carousel .review_wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.services_screen .review_container {
+    width: 400%;
+}
+
+.services_screen .carousel .long{
+	width:1000%;
+	-webkit-transition: all 0.15s linear 0s;
+    -moz-transition: all 0.15s linear 0s;
+    -o-transition: all 0.15s linear 0s;
+    transition: all 0.15s linear 0s;
+}
+
+.services_screen .carousel .portfolio{
+    padding: 0 40px;
+    box-sizing: border-box;
+    float: left;
+    width: 2.5%;
+}
+
+.services_screen .portfolio .inner{
+	width: 100%;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.services_screen .inner .photo {
+    background: #f6de00;
+    width: 100%;
+    height: 315px;
+}
+
+.services_screen .house .inner .photo {
+    background: #16ebe0;
+}
+
+.services_screen .flat .inner .photo {
+    background: #16e541;
+}
+
+.services_screen .inner .text {
+    padding: 35px 30px;
+}
+
+.services_screen .inner .object {
+    font: 600 32px "ProximaNovaExCn";
+    text-align: center;
+}
+
+.services_screen .inner .description {
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+    padding: 9px 0 32px;
+}
+
+.services_screen .inner .yellow.button {
+    display: block;
+    margin: 0 auto;
+}
+
+.services_screen .control {
+    background: url('../images/sprites.svg') no-repeat -10px -224px;
+	width: 34px;
+	height: 34px;
+	position:absolute;
+    top: 272px;
+	cursor:pointer;
+}
+
+.services_screen .control.prev { 
+	left: 15px;
+}
+
+.services_screen .control.next{
+    background-position:  -73px -224px;
+	right: 15px;
 }
 
 .services_screen .all_services {
@@ -587,11 +715,30 @@ header .button {
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    padding: 30px;
+    padding: 48px 48px 33px;
+    width: 47.5%;
+}
+
+.services_screen .framed::before {
+    height: 10%;
+}
+
+.services_screen .framed::after {
+    height: 10%;
+}
+
+.services_screen .caption {
+    margin-bottom: 10px;
+}
+
+.services_screen .after_caption {
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+    text-align: center;
 }
 
 .services_screen .services_links {
-    margin: 0 -15px
+    margin: 10px -15px
 }
 
 .services_screen .service_group_wr {
@@ -601,15 +748,16 @@ header .button {
 }
 
 .services_screen .service_group {
-    display: block;
+    display: flex;
     font: 700 20px "ProximaNova";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
-    padding: 80px 0;
     position: relative;
+    width: 100%;
+    height: 165px;
 }
 
 .services_screen .service_group::before {
@@ -643,11 +791,15 @@ header .button {
     background-size: cover;
 }
 
+.services_screen .service_name {
+    margin: auto;
+}
+
 /*question_answer*/
 
 .question_answer {
     background: #f7f7f7; 
-    padding: 20px 0 65px;
+    padding: 10px 0 65px;
 }
 
 .question_answer .caption {
@@ -667,7 +819,7 @@ header .button {
 
 .question_answer .question:after {
     content: '';
-    background: url(../images/sprites.svg) -183px -227px;
+    background: url(../images/sprites.svg) -183px -225px;
 	width: 28px;
 	height: 28px;
     position: absolute;
@@ -679,6 +831,10 @@ header .button {
 
 .question_answer .question.active {
     margin-bottom: 0;
+}
+
+.question_answer .question.active::after {
+    background-position: -227px -225px;
 }
 
 .question_answer .answer {
@@ -735,11 +891,15 @@ footer .form .form_caption  {
 }
 
 footer .form .wpcf7-form {
-    margin: 6px 0 0;
+    margin: 10px 0 0;
 }
 
 footer .form .wpcf7-form-control-wrap {
     width: 100%;
+}
+
+.form .wpcf7-form-control {
+    padding: 0 12px;
 }
 
 footer .second_footer {
