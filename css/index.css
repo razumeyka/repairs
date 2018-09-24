@@ -574,6 +574,7 @@ header .button {
     color: rgb(36, 31, 22);
     line-height: 34px;
     text-align: right;
+    text-decoration:line-through;
     padding-right: 10px;
 }
 
