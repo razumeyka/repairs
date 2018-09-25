@@ -946,14 +946,6 @@ footer .second_footer a {
 }
 
 @media screen and (max-width: 1366px) {
-    
-}
-
-@media screen and (max-width: 1279px) {
-    .wrapper {
-        padding: 0 15px;
-    }
-    
     .prices_screen .price_list {
         width: 100%;
         margin: 0;
@@ -963,12 +955,16 @@ footer .second_footer a {
     .prices_screen .advantages {
         order: 2;
         margin-top: 20px;
-        max-width: 1279px;
+        max-width: 1366px;
     }
 }
 
-@media screen and (max-width: 1023px) {
-	.right_header {
+@media screen and (max-width: 1279px) {
+    .wrapper {
+        padding: 0 15px;
+    }
+    
+    .right_header {
         margin-right: 50px;
     }
     
@@ -1053,10 +1049,11 @@ footer .second_footer a {
     .services_screen .service_group_wr {
         width: 25%;
     }
+
 }
 
-@media screen and (max-width: 767px) {
-    header .button {
+@media screen and (max-width: 1023px) {
+        header .button {
         display: none;
     }
     
@@ -1091,7 +1088,7 @@ footer .second_footer a {
     }
 }
 
-@media screen and (max-width: 639px) {
+@media screen and (max-width: 767px) {
     header .wrapper {
         flex-direction: column-reverse;
     }
@@ -1121,4 +1118,8 @@ footer .second_footer a {
     .services_screen .service_group_wr {
         width: 100%;
     }
+}
+
+@media screen and (max-width: 639px) {
+
 }
