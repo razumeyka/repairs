@@ -101,11 +101,11 @@ header {
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 16px 0;
     position: absolute;
     right: 0;
     left: 0;
     top: 0;
+    min-width: 360px;
 }
 
 .logo {
@@ -126,12 +126,6 @@ header .menu {
     margin: 0;
 }
 
-header .menu:after{
-	content:"";
-	display:block;
-	clear:both;
-}
-
 header .menu li {
     list-style: none;
     float: left;
@@ -143,31 +137,31 @@ header .menu a {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 33px 20px;
 }
 
-header .submenu {
+header .sub-menu {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 66px;
+    top: 90px;
     left: 0;
     display: none;
     z-index: 1;
 }
 
-header .menu li:hover .submenu {
+header .menu li:hover .sub-menu {
     display: block;
 }
 
-header .submenu li {
+header .sub-menu li {
     position: relative;
     transition: all .2s linear 0s;
     margin-bottom: 2px;
     width: 230px;
 }
 
-header .submenu li a {
+header .sub-menu li a {
     position: relative;
     box-sizing: border-box;
     border-left: 4px solid rgb(255, 222, 0);
@@ -180,13 +174,8 @@ header .submenu li a {
     width: 100%;
 }
 
-.burger_wrapper {
-    display: none;
-    background-color: #ffffff;
-    height: 44px;
-}
-
 .burger {
+    display: none;
     position: absolute;
     width: 40px;
     height: 40px;
@@ -195,7 +184,6 @@ header .submenu li a {
     bottom: 0;
     margin: auto 0;
     cursor: pointer;
-    display: block;
     z-index: 1;
 }
 
@@ -207,7 +195,7 @@ header .submenu li a {
     width: 36px;
     background: rgb(255, 255, 255);
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 15px;
     transition: all 200ms ease-in-out;
 }
@@ -215,6 +203,7 @@ header .submenu li a {
 .burger span::before {
     content: '';
     left: 0;
+    top: 10px;
 }
 
 .burger span::after {
@@ -235,7 +224,7 @@ header .submenu li a {
  .burger.active span::after  {
     transform: rotate(-45deg);
     top: 8px;
-} 
+}
 
 .button {
     display:inline-block;
@@ -252,9 +241,12 @@ header .button {
     font: 700 20px "ProximaNovaCond";
     color: rgb(255, 255, 255);
     min-width: 230px;
-    height: 50px;
-    line-height: 47px;
+    padding: 10px 36px 12px;
     margin: auto 40px auto 0;
+}
+
+header .phone_wr {
+    padding: 15px 0;
 }
 
 .phone {
@@ -264,7 +256,7 @@ header .button {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.9px;
-    line-height: 0.9;
+    line-height: 1;
 }
 
 .phone span {
@@ -274,9 +266,7 @@ header .button {
 .contact_info {
     font-size: 13px;
     color: rgb(206, 206, 206);
-    text-align: right;
     letter-spacing: 0.5px;
-    margin: 3px 5px 0 0;
 }
 
 /*main_screen*/
@@ -299,13 +289,13 @@ header .button {
 }
 
 .main_screen .services {
-    margin: 38px -10px 45px;
+    flex-wrap: nowrap;
+    margin: 35px -20px 50px;
 }
 
 .main_screen .service_wr {
-    width: 25%;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
 .main_screen .service {
@@ -315,22 +305,19 @@ header .button {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     text-decoration: none;
-    height: 70px;
-    padding-left: 80px;
+    height: 64px;
 }
 
 .main_screen .service .icon {
     background-image: url(../images/sprites.svg);
-    background-position: -1px -4px;
-	width: 60px;
-	height: 63px;
-    position: absolute;
-    left: 0;
-    top: 0;
+    background-position: -1px -2px;
+	width: 64px;
+	height: 64px;
+    position: relative;
 }
 
 .main_screen .service.electric .icon {
-    background-position: -72px -2px;
+    background-position: -70px -1px;
 }
 
 .main_screen .service.plumbing .icon {
@@ -341,31 +328,26 @@ header .button {
     background-position: -207px -2px;
 }
 
-.main_screen .service .icon::before {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 16px;
-    top: 0;
+.main_screen .framed::before {
+    height: 19px;
     border-top: 2px solid #ffde00;
     border-right: 2px solid #ffde00;
     border-left: 2px solid #ffde00;
 }
 
-.main_screen .service .icon::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 16px;
-    bottom: 0;
+.main_screen .framed::after {
+    height: 19px;
+    box-sizing: border-box;
     border-right: 2px solid #ffde00;
     border-left: 2px solid #ffde00;
     border-bottom: 2px solid #ffde00;
 }
 
 .main_screen .service .text {
-    max-width: 130px;
+    max-width: 105px;
     margin: auto 0;
+    padding-left: 15px;
+    letter-spacing: 0.5px;
 }
 
 .form {
@@ -410,7 +392,7 @@ header .button {
 }
 
 .form input:not([type=submit]):focus {
-	border: 1px solid #000082;
+	border: 1px solid rgb(255, 222, 0);
 }
 
 .form .button {
@@ -454,10 +436,11 @@ header .button {
 .framed::before {
     content: "";
     position: absolute;
-    width: calc(100% - 15px);
+    width: 100%;
     height: 15%;
     top: 0;
     left: 0;
+    box-sizing: border-box;
     border-top: 8px solid #ffde00;
     border-right: 8px solid #ffde00;
     border-left: 8px solid #ffde00;
@@ -466,10 +449,11 @@ header .button {
 .framed::after {
     content: "";
     position: absolute;
-    width: calc(100% - 15px);
+    width: 100%;
     height: 15%;
     bottom: 0;
     left: 0;
+    box-sizing: border-box;
     border-right: 8px solid #ffde00;
     border-left: 8px solid #ffde00;
     border-bottom: 8px solid #ffde00;
@@ -694,7 +678,7 @@ header .button {
 .services_screen .inner .description {
     font-size: 18px;
     color: rgb(104, 104, 104);
-    padding: 9px 0 32px;
+    margin: 9px 0 32px;
 }
 
 .services_screen .inner .yellow.button {
@@ -886,7 +870,6 @@ footer .logo {
 }
 
 footer .contact_info {
-    text-align: left;
     font-size: 16px;
     margin: 0;
 }
@@ -921,7 +904,7 @@ footer .form .wpcf7-form-control-wrap {
     width: 100%;
 }
 
-.form .wpcf7-form-control {
+footer .form .wpcf7-form-control {
     padding: 0 12px;
 }
 
@@ -964,69 +947,57 @@ footer .second_footer a {
         padding: 0 15px;
     }
     
-    .right_header {
+    header .right_header {
         margin-right: 50px;
     }
     
     header .navbar {
         display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
     }
     
-    header .burger_wrapper {
+    header .burger{
         display: block;
     }
     
     header .menu {
-        position: absolute;
-        top: 90px;
-        left: 0;
-        margin: 0;
-        width: 100%;
         text-align: center;
-        z-index: 1;
     }
     
     header .menu li {
         float: none;
-        border-bottom: 1px solid rgb(255, 255, 255);
         width: 100%;
     }
     
     header .menu li a {
         background-color: #ffde00;
         width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(255, 255, 255);
     }
     
-    header .menu li:hover .submenu {
+    header .menu li:hover .sub-menu {
         display: none;
     } 
     
-    header .menu .submenu {
+    header .menu .sub-menu {
         position: static;
     }
     
-    header .menu .submenu li {
+    header .menu .sub-menu li {
         margin: 0;
-        border-bottom: 1px solid rgb(246, 222, 0);
     }
     
-    header .menu .submenu a {
+    header .menu .sub-menu a {
         background-color: rgb(254, 254, 254);
         border: none;
-        padding: 10px 0;
-    }
-    
-    .main_screen .service .text {
-        display: none;
-    }
-    
-    .main_screen .service .icon {
-        right: 0;
-        margin: 0 auto;
-    }
-    
-    .form .wpcf7-form-control-wrap {
-        width: 100%;
+        padding: 10px 15px;
+        border-bottom: 1px solid rgb(246, 222, 0);
     }
     
     .services_screen .wrapper {
@@ -1053,8 +1024,25 @@ footer .second_footer a {
 }
 
 @media screen and (max-width: 1023px) {
-        header .button {
+    header .button {
         display: none;
+    }
+    
+    .main_screen .services {
+        justify-content: space-around;
+        margin: 35px 0 50px;
+    }
+    
+    .main_screen .service_wr {
+        padding: 0;
+    }
+    
+    .main_screen .service .text {
+        display: none;
+    }
+    
+    .form .wpcf7-form-control-wrap {
+        width: 100%;
     }
     
     .services_screen .portfolio .inner {
@@ -1074,10 +1062,6 @@ footer .second_footer a {
         margin: 0 auto 30px;
     }
     
-    footer .contact_info {
-        text-align: center;
-    }
-    
     footer .contacts {
         margin: 0 auto 20px;
         text-align: center;
@@ -1093,12 +1077,16 @@ footer .second_footer a {
         flex-direction: column-reverse;
     }
     
-    .phone_wr {
-        margin: 0 auto;
+    header .right_header {
+        margin: 0;
     }
     
-    .right_header {
-        margin: 0;
+    header .left_header {
+        padding-bottom: 15px;
+    }
+    
+    .phone_wr {
+        margin: 0 auto;
     }
     
     .burger{
@@ -1107,19 +1095,23 @@ footer .second_footer a {
         bottom: 15px;
     }
     
-    header .menu {
-        top: 134px;
+    header .navbar {
+        top: 143px;
     }
     
     .form {
         padding: 40px 20px 30px;
     }
     
-    .services_screen .service_group_wr {
-        width: 100%;
+    .main_screen {
+        padding: 176px 0 62px;
     }
+    
 }
 
 @media screen and (max-width: 639px) {
+    .services_screen .service_group_wr {
+        width: 100%;
+    }
 
 }

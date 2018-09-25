@@ -8,8 +8,12 @@
     });  
      
     $('.menu li' ).click(function(){
-        $(this).find('.submenu').slideToggle(500);
+        $(this).find('.sub-menu').slideToggle(500);
     });
+         
+//mobile menu 
+     
+    $(".wpcf7-tel").mask("8(999) 999-99-99");
      
 //portfolio carousel
     $('.carousel .next,.carousel .prev').click(function(){
