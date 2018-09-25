@@ -560,6 +560,10 @@ header .button {
     text-decoration: none;
 }
 
+.prices_screen .price_list .line:hover {
+    background-color: rgb(247, 247, 247);
+}
+
 .prices_screen .price_list .service_type {
     font-size: 18px;
     color: rgb(36, 31, 22);
