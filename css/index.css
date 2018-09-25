@@ -185,13 +185,18 @@ header .submenu li a {
     background-color: #ffffff;
     height: 44px;
 }
+
 .burger {
     position: absolute;
     width: 40px;
     height: 40px;
     right: 0;
-    top: 9px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
     cursor: pointer;
+    display: block;
+    z-index: 1;
 }
 
 .burger span, .burger span::before, .burger span::after {
@@ -200,7 +205,7 @@ header .submenu li a {
     border-radius: 5px;
     height: 4px;
     width: 36px;
-    background: rgb(0, 38, 73);
+    background: rgb(255, 255, 255);
     position: absolute;
     top: 10px;
     right: 15px;
@@ -604,7 +609,7 @@ header .button {
 .yellow.button {
     background-color: rgb(255, 222, 0);
     height: 60px;
-    width: 300px;
+    max-width: 300px;
     font: 700 24px "ProximaNovaExCn";
     color: rgb(0, 0, 0);
     text-transform: uppercase;
@@ -949,6 +954,24 @@ footer .second_footer a {
         padding: 0 15px;
     }
     
+    .prices_screen .price_list {
+        width: 100%;
+        margin: 0;
+        order: 1;
+    }
+    
+    .prices_screen .advantages {
+        order: 2;
+        margin-top: 20px;
+        max-width: 1279px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+	.right_header {
+        margin-right: 50px;
+    }
+    
     header .navbar {
         display: none;
     }
@@ -956,17 +979,146 @@ footer .second_footer a {
     header .burger_wrapper {
         display: block;
     }
-}
-
-@media screen and (max-width: 1023px) {
-	
+    
+    header .menu {
+        position: absolute;
+        top: 90px;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    header .menu li {
+        float: none;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        width: 100%;
+    }
+    
+    header .menu li a {
+        background-color: #ffde00;
+        width: 100%;
+    }
+    
+    header .menu li:hover .submenu {
+        display: none;
+    } 
+    
+    header .menu .submenu {
+        position: static;
+    }
+    
+    header .menu .submenu li {
+        margin: 0;
+        border-bottom: 1px solid rgb(246, 222, 0);
+    }
+    
+    header .menu .submenu a {
+        background-color: rgb(254, 254, 254);
+        border: none;
+        padding: 10px 0;
+    }
+    
+    .main_screen .service .text {
+        display: none;
+    }
+    
+    .main_screen .service .icon {
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    .form .wpcf7-form-control-wrap {
+        width: 100%;
+    }
+    
+    .services_screen .wrapper {
+        flex-wrap: wrap;
+    }
+    
+    .services_screen .carousel {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .services_screen .portfolio .inner {
+        display: flex;
+    }
+    
+    .services_screen .all_services {
+        width: 100%;
+    }
+    
+    .services_screen .service_group_wr {
+        width: 25%;
+    }
 }
 
 @media screen and (max-width: 767px) {
-		
+    header .button {
+        display: none;
+    }
+    
+    .services_screen .portfolio .inner {
+        display: block;
+    }
+    
+    .services_screen .service_group_wr {
+        width: 50%;
+    }
+    
+    footer .wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer .logo {
+        margin: 0 auto 30px;
+    }
+    
+    footer .contact_info {
+        text-align: center;
+    }
+    
+    footer .contacts {
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    
+    footer .form {
+        margin: 0 auto;
+    }
 }
 
 @media screen and (max-width: 639px) {
-
-
+    header .wrapper {
+        flex-direction: column-reverse;
+    }
+    
+    .phone_wr {
+        margin: 0 auto;
+    }
+    
+    .right_header {
+        margin: 0;
+    }
+    
+    .burger{
+        margin: 0;
+        top: auto;
+        bottom: 15px;
+    }
+    
+    header .menu {
+        top: 134px;
+    }
+    
+    .form {
+        padding: 40px 20px 30px;
+    }
+    
+    .services_screen .service_group_wr {
+        width: 100%;
+    }
 }
