@@ -62,6 +62,7 @@
 }
 
 body{
+    background: #f7f7f7;
 	margin:0;
 	padding: 0;
 	font-family: 'ProximaNova', sans-serif;
@@ -75,7 +76,7 @@ body{
 
 button,input,select,textarea{
     font-family: 'ProximaNova'; 
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .wrapper {
@@ -285,12 +286,13 @@ header .phone_wr {
     font: 600 48px "ProximaNovaExCn";
     color: rgb(255, 255, 255);
     text-transform: uppercase;
+    line-height: 1.3;
     margin: 0;
 }
 
 .main_screen .services {
     flex-wrap: nowrap;
-    margin: 35px -20px 50px;
+    margin: 33px -20px 50px;
 }
 
 .main_screen .service_wr {
@@ -382,8 +384,6 @@ header .phone_wr {
     border-radius: 5px;
     height: 60px;
     width: 100%;
-    font-size: 20px;
-    font-family: "ProximaNova";
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
@@ -422,7 +422,7 @@ header .phone_wr {
 }
 
 .prices_screen .advantages_wr {
-    max-width: 430px;
+    max-width: 400px;
 }
 
 .prices_screen .advantages {
@@ -458,7 +458,7 @@ header .phone_wr {
     content: "";
     position: absolute;
     width: 100%;
-    height: 39px;
+    height: 19%;
     top: 0;
     left: 0;
     box-sizing: border-box;
@@ -471,7 +471,7 @@ header .phone_wr {
     content: "";
     position: absolute;
     width: 100%;
-    height: 39px;
+    height: 19%;
     bottom: 0;
     left: 0;
     box-sizing: border-box;
@@ -503,28 +503,26 @@ header .phone_wr {
 
 .prices_screen .after_number {
     font: 900 26px "ProximaNovaCond";
-    padding-top: 5px;
 }
 
 .prices_screen .remark {
     font: 400 14px "ProximaNovaCond";
-    padding-top: 5px;
 }
 
 .prices_screen .advantage .icon {
     background-image: url(../images/sprites.svg);
-    background-position: -6px -107px;
+    background-position: -5px -107px;
 	width: 70px;
 	height: 70px;
     margin: 0 auto;
 }
 
 .prices_screen .advantage.term .icon {
-    background-position: -146px -107px;
+    background-position: -148px -107px;
 }
 
 .prices_screen .advantage.contract .icon {
-    background-position: -292px -107px;
+    background-position: -294px -107px;
 }
 
 .prices_screen .after_icon {
@@ -538,7 +536,7 @@ header .phone_wr {
     flex: 1;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    padding: 42px 55px;
+    padding: 42px 55px 42px 60px;
     margin-left: 63px;
 }
 
@@ -564,7 +562,6 @@ header .phone_wr {
 .prices_screen .price_list .service_type {
     font-size: 18px;
     color: rgb(36, 31, 22);
-    line-height: 34px;
     flex: 1;
     width: 350px;
     padding-right: 20px;
@@ -574,15 +571,14 @@ header .phone_wr {
 .prices_screen .price_list .old_price {
     font-size: 15px;
     color: rgb(36, 31, 22);
-    line-height: 34px;
-    text-align: right;
     text-decoration: line-through;
-    padding-right: 10px;
+    padding-right: 15px;
+    margin: auto;
 }
 
 .prices_screen .price_list .new_price {
     border: 2px solid rgb(255, 222, 0);
-    font: 700 18px  "ProximaNova";
+    font: 700 18px "ProximaNova";
     color: rgb(0, 0, 0);
     letter-spacing: 0.6px;
     padding: 4px;
@@ -611,8 +607,7 @@ header .phone_wr {
 
 /*services_screen*/
 
-.services_screen {
-    background: #f7f7f7; 
+.services_screen { 
     padding: 62px 0;
 }
 
@@ -620,7 +615,8 @@ header .phone_wr {
     flex-wrap: nowrap;
 }
 
-.services_screen .carousel{
+.services_screen .carousel {
+    overflow: hidden;
     position: relative;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
@@ -723,11 +719,11 @@ header .phone_wr {
 }
 
 .services_screen .framed::before {
-    height: 10%;
+    height: 12%;
 }
 
 .services_screen .framed::after {
-    height: 10%;
+    height: 12%;
 }
 
 .services_screen .caption {
@@ -814,7 +810,6 @@ header .phone_wr {
 /*question_answer*/
 
 .question_answer {
-    background: #f7f7f7; 
     padding: 10px 0 65px;
 }
 
@@ -857,7 +852,7 @@ header .phone_wr {
     display: none;
     box-sizing: border-box;
     background-color: #ffffff;
-    padding: 15px 25px;
+    padding: 12px 27px;
     border: 1px solid rgb(216, 223, 227);
     font-size: 20px;
     text-align: justify;
@@ -892,7 +887,7 @@ footer .contact {
 }
 
 footer .contact.mail {
-    padding: 25px 0;
+    margin: 23px 0;
 }
 
 footer .form {
@@ -927,8 +922,6 @@ footer .second_footer {
 footer .second_footer a {
     color: rgb(255, 255, 255);
 }
-
-
 
 
 /*media*/
@@ -1037,6 +1030,18 @@ footer .second_footer a {
         display: flex;
     }
     
+    .services_screen .portfolio .photo {
+        width: 400px;
+    }
+    
+    .services_screen .portfolio .text {
+        flex: 1;
+    }
+    
+    .services_screen .control.next {
+        left: 355px;
+    }
+    
     .services_screen .all_services {
         width: 100%;
     }
@@ -1069,6 +1074,15 @@ footer .second_footer a {
         width: 100%;
     }
     
+    .prices_screen .prices {
+        flex-direction: column-reverse;
+    }
+    
+    .prices_screen .price_list .old_price {
+        text-align: center;
+        padding: 0;
+    }
+    
     .prices_screen .column_wr.discount_shedule {
         display: none;
     }
@@ -1083,6 +1097,14 @@ footer .second_footer a {
     
     .services_screen .portfolio .inner {
         display: block;
+    }
+    
+    .services_screen .portfolio .photo {
+        width: 100%;
+    }
+    
+    .services_screen .control.next {
+        left: auto;
     }
     
     .services_screen .service_group_wr {
@@ -1147,13 +1169,12 @@ footer .second_footer a {
         padding: 42px 25px;
     }
     
-    .prices_screen .prices {
-        flex-direction: column-reverse;
+    .prices_screen .price_list .between {
+        flex-direction: column;
     }
-    
-    .prices_screen .price_list .old_price {
-        text-align: center;
-        padding: 0;
+
+    .prices_screen .yellow.button {
+        margin-top: 15px;
     }
     
     .prices_screen .column_wr.discount_shedule {
