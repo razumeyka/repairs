@@ -1014,7 +1014,17 @@ footer .second_footer a {
     }
     
     .prices_screen .advantage, .prices_screen .advantage.projects, .prices_screen .column_wr .advantage.term, .prices_screen .column_wr .advantage.shedule {
-        height: 210px;
+        height: 265px;
+    }
+    
+    .prices_screen .framed::before {
+        border-right: 10px solid #ffde00;
+        border-left: 10px solid #ffde00;
+    }
+    
+    .prices_screen .framed::after {
+        border-right: 10px solid #ffde00;
+        border-left: 10px solid #ffde00;
     }
     
     .services_screen .wrapper {
@@ -1187,6 +1197,16 @@ footer .second_footer a {
     
     .prices_screen .column_wr {
         width: 50%;
+    }
+    
+    .prices_screen .framed::before {
+        border-right: 8px solid #ffde00;
+        border-left: 8px solid #ffde00;
+    }
+    
+    .prices_screen .framed::after {
+        border-right: 8px solid #ffde00;
+        border-left: 8px solid #ffde00;
     }
     
 }
