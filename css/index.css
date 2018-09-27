@@ -145,7 +145,7 @@ header .sub-menu {
     position: absolute;
     margin: 0;
     padding: 0;
-    top: 90px;
+    top: 87px;
     left: 0;
     display: none;
     z-index: 1;
@@ -423,6 +423,7 @@ header .phone_wr {
 
 .prices_screen .advantages_wr {
     max-width: 400px;
+    min-height: 870px;
 }
 
 .prices_screen .advantages {
@@ -499,14 +500,17 @@ header .phone_wr {
     font: 900 90px "ProximaNovaCond";
     color: rgb(255, 204, 0);
     line-height: 1;
+    margin-top: -5px;
 }
 
 .prices_screen .after_number {
     font: 900 26px "ProximaNovaCond";
+    margin-top: -5px;
 }
 
 .prices_screen .remark {
     font: 400 14px "ProximaNovaCond";
+    margin-top: 5px;
 }
 
 .prices_screen .advantage .icon {
@@ -535,9 +539,13 @@ header .phone_wr {
 .prices_screen .price_list {
     flex: 1;
     background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    padding: 42px 55px 42px 60px;
+    padding: 42px 55px 50px 60px;
     margin-left: 63px;
+    min-height: 870px;
+    display: flex;
+    flex-direction: column;
 }
 
 .caption {
@@ -563,7 +571,6 @@ header .phone_wr {
     font-size: 18px;
     color: rgb(36, 31, 22);
     flex: 1;
-    width: 350px;
     padding-right: 20px;
     margin: auto 0;
 }
@@ -577,15 +584,19 @@ header .phone_wr {
 }
 
 .prices_screen .price_list .new_price {
+    background: rgb(255,255,255);
     border: 2px solid rgb(255, 222, 0);
     font: 700 18px "ProximaNova";
     color: rgb(0, 0, 0);
     letter-spacing: 0.6px;
-    padding: 4px;
+    height: 29px;
+    line-height: 29px;
+    padding: 0 4px;
+    margin: auto;
 }
 
 .prices_screen .price_list .between {
-    margin-top: 65px;
+    margin: auto 0 0 0;
 }
 
 .prices_screen .price_list .term{
@@ -620,19 +631,20 @@ header .phone_wr {
     position: relative;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
-    width: 47.5%;
+    width: 570px;
+    margin-right: 60px;
 }
 
 .services_screen .carousel .carousel_wr{
     overflow: hidden;
     margin: 0 -40px;
 }
-.services_screen .carousel .review_wrapper {
+.services_screen .carousel .content_wrapper {
     width: 100%;
     overflow: hidden;
 }
 
-.services_screen .review_container {
+.services_screen .content_container {
     width: 400%;
 }
 
@@ -661,6 +673,7 @@ header .phone_wr {
     background: #f6de00;
     width: 100%;
     height: 315px;
+    position: relative;
 }
 
 .services_screen .house .inner .photo {
@@ -691,31 +704,35 @@ header .phone_wr {
     margin: 0 auto;
 }
 
-.services_screen .control {
-    background: url('../images/sprites.svg') no-repeat -10px -224px;
-	width: 34px;
-	height: 34px;
-	position:absolute;
-    top: 272px;
-	cursor:pointer;
+.services_screen .controls {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 57px;
+    box-sizing: border-box;
+    padding: 0 18px;
 }
 
-.services_screen .control.prev { 
-	left: 15px;
+.services_screen .control {
+    background: url('../images/sprites.svg') no-repeat -8px -222px;
+	width: 34px;
+	height: 34px;
+	cursor:pointer;
+    margin: auto 0;
 }
 
 .services_screen .control.next{
-    background-position:  -73px -224px;
-	right: 15px;
+    background-position:  -71px -222px;
 }
 
 .services_screen .all_services {
+    flex: 1;
     position: relative;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 48px 48px 33px;
-    width: 47.5%;
 }
 
 .services_screen .framed::before {
@@ -764,14 +781,6 @@ header .phone_wr {
     transition: all 300ms ease-in;
 }
 
-.services_screen .service_group:hover {
-    -moz-transform: scale(1.02);
-    -webkit-transform: scale(1.02);
-    -o-transform: scale(1.02);
-    -ms-transform: scale(1.02);
-    transform: scale(1.02);
-}
-
 .services_screen .service_group::before {
     content: "";
     background: url(../images/sprites.svg) no-repeat -124px -220px;
@@ -785,22 +794,38 @@ header .phone_wr {
 
 .services_screen .service_group.plumbing {
     background: url(../images/service_group_1.jpg) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;  
+}
+
+.services_screen .service_group.plumbing:hover {
+    background-size: 110% 110%;  
 }
 
 .services_screen .service_group.electric {
     background: url(../images/service_group_2.jpg) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;  
+}
+
+.services_screen .service_group.electric:hover {
+    background-size: 110% 110%;  
 }
 
 .services_screen .service_group.complex {
     background: url(../images/service_group_3.jpg) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;  
+}
+
+.services_screen .service_group.complex:hover {
+    background-size: 110% 110%;  
 }
 
 .services_screen .service_group.for_hour {
     background: url(../images/service_group_4.jpg) no-repeat center;
-    background-size: cover;
+    background-size: 100% 100%;  
+}
+
+.services_screen .service_group.for_hour:hover {
+    background-size: 110% 110%;  
 }
 
 .services_screen .service_name {
@@ -820,7 +845,7 @@ header .phone_wr {
 .question_answer .question {
     position: relative;
     cursor: pointer;
-    margin: 14px 0 14px;
+    margin-top: 14px;
     box-sizing: border-box;
     background-color: #ffffff;
     border: 1px solid rgb(216, 223, 227);
@@ -838,10 +863,6 @@ header .phone_wr {
     top: 0;
     right: 14px;
     margin: auto;
-}
-
-.question_answer .question.active {
-    margin-bottom: 0;
 }
 
 .question_answer .question.active::after {
@@ -994,6 +1015,7 @@ footer .second_footer a {
     
     .prices_screen .price_list {
         width: 100%;
+        min-height: auto;
         margin: 0;
         order: 1;
     }
@@ -1002,6 +1024,7 @@ footer .second_footer a {
         order: 2;
         margin-top: 20px;
         width: 100%;
+        min-height: auto;
         max-width: 1279px;
     }
     
@@ -1033,7 +1056,7 @@ footer .second_footer a {
     
     .services_screen .carousel {
         width: 100%;
-        margin-bottom: 30px;
+        margin: 0 0 30px;
     }
     
     .services_screen .portfolio .inner {
@@ -1042,18 +1065,11 @@ footer .second_footer a {
     
     .services_screen .portfolio .photo {
         width: 400px;
-    }
+        height: auto; 
+    }  
     
     .services_screen .portfolio .text {
         flex: 1;
-    }
-    
-    .services_screen .control.next {
-        left: 355px;
-    }
-    
-    .services_screen .all_services {
-        width: 100%;
     }
     
     .services_screen .service_group_wr {
@@ -1111,10 +1127,7 @@ footer .second_footer a {
     
     .services_screen .portfolio .photo {
         width: 100%;
-    }
-    
-    .services_screen .control.next {
-        left: auto;
+        height: 315px;
     }
     
     .services_screen .service_group_wr {
@@ -1172,7 +1185,7 @@ footer .second_footer a {
     }
     
     .main_screen {
-        padding: 176px 0 62px;
+        padding: 190px 0 62px;
     }
     
     .prices_screen .price_list {
