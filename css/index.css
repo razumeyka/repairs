@@ -483,9 +483,6 @@ header .phone_wr {
 
 .prices_screen .advantage_wr {
     position: relative;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     height: 100%;
     color: rgb(71, 71, 71);
     text-transform: uppercase;
@@ -538,14 +535,17 @@ header .phone_wr {
 
 .prices_screen .price_list {
     flex: 1;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 42px 55px 50px 60px;
     margin-left: 63px;
     min-height: 870px;
     display: flex;
     flex-direction: column;
+}
+
+.with_shadow {
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 .caption {
@@ -629,8 +629,6 @@ header .phone_wr {
 .services_screen .carousel {
     overflow: hidden;
     position: relative;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     width: 570px;
     margin-right: 60px;
 }
@@ -688,15 +686,16 @@ header .phone_wr {
     padding: 35px 30px;
 }
 
-.services_screen .inner .object {
+.small_caption {
     font: 600 32px "ProximaNovaExCn";
     text-align: center;
 }
 
-.services_screen .inner .description {
+.description {
     font-size: 18px;
     color: rgb(104, 104, 104);
-    margin: 9px 0 32px;
+    margin: 9px 0 35px;
+    text-align: justify;
 }
 
 .services_screen .inner .yellow.button {
@@ -729,9 +728,6 @@ header .phone_wr {
 .services_screen .all_services {
     flex: 1;
     position: relative;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
     padding: 48px 48px 33px;
 }
 
@@ -944,6 +940,117 @@ footer .second_footer a {
     color: rgb(255, 255, 255);
 }
 
+/*advantages_screen*/
+
+.main_screen.advantages_page {
+    padding: 136px 0 44px;
+    text-align: center;
+}
+
+.advantages_screen {
+    padding: 60px 0 82px;
+}
+
+.advantages_screen .advantages_list {
+    padding: 0 30px;
+}
+
+.advantages_screen .advantage_item_wr {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 60px;
+}
+
+.advantages_screen .bordered {
+    width: 50%;
+    height: 100px;
+    box-sizing: border-box;
+    border-right: 10px solid rgb(255, 222, 0);
+}
+
+.advantages_screen .advantage_item {
+    background: url(../images/numbers.svg) no-repeat -200px -14px;
+    padding-top: 65px;
+    margin-top: 40px;
+    line-height: 1.35;
+    position: relative;
+}
+
+.advantages_screen .advantage_item.two {
+    background-position: -638px -10px;
+}
+
+.advantages_screen .advantage_item.three{
+    background-position: -1104px -10px;
+}
+
+.advantages_screen .advantage_item.four {
+    background-position: -1567px -14px;
+}
+
+.advantages_screen .advantage_item.five {
+    background-position: -2039px -14px;
+}
+
+.advantages_screen .advantage_item.six {
+    background-position: -2503px -10px;
+}
+
+.advantages_screen .advantage_item.seven {
+    background-position: -2980px -14px;
+}
+
+.advantages_screen .advantage_item.eight {
+    background-position: -3437px -10px;
+}
+
+.advantages_screen .advantage_item .flex {
+    position: relative;
+    flex-wrap: nowrap;
+    margin-bottom: 15px;
+}
+
+.advantages_screen .advantage_item .icon {
+    content: "";
+	background: url(../images/sprites.svg) no-repeat  -7px -283px;
+	width: 86px;
+	height: 86px;
+    margin-right: 15px;
+}
+
+.advantages_screen .advantage_item.two .icon{
+    background-position: -125px -283px;
+}
+
+.advantages_screen .advantage_item.three .icon{
+    background-position: -243px -280px;
+}
+
+.advantages_screen .advantage_item.four .icon{
+    background-position: -368px -283px;
+}
+
+.advantages_screen .advantage_item.five .icon{
+    background-position: -494px -283px;
+}
+
+.advantages_screen .advantage_item.six .icon {
+    background-position: -618px -283px;
+}
+
+.advantages_screen .advantage_item.seven .icon {
+    background-position: -744px -283px;
+}
+
+.advantages_screen .advantage_item.eight .icon {
+    background-position: -869px -283px;
+}
+
+.advantages_screen .advantage_item .small_caption {
+    text-align: left;
+    margin: auto 0;
+    flex: 1;
+}
 
 /*media*/
 
@@ -1150,6 +1257,15 @@ footer .second_footer a {
     
     footer .form {
         margin: 0 auto;
+    }
+    
+    .advantages_screen .advantage_item_wr {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .advantages_screen .advantage_item_wr:nth-child(7n) .bordered:last-child {
+        display: none;
     }
 }
 
