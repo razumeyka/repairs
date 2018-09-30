@@ -1034,7 +1034,7 @@ footer .second_footer a {
     z-index: 2;  
 }
 
-.advantage_item .advantage_item_caption {
+.advantage_item_wr .advantage_item_caption {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
@@ -1077,14 +1077,14 @@ footer .second_footer a {
     background-position: -869px -283px;
 }
 
-.advantage_item .advantage_item_caption_text {
+.advantage_item_wr .advantage_item_caption_text {
     font: 600 32px "ProximaNovaExCn";
     text-align: left;
     margin: auto 0;
     flex: 1;
 }
 
-.advantage_item .advantage_item_description {
+.advantage_item_wr .advantage_item_description {
     font-size: 18px;
     color: rgb(104, 104, 104);
     margin: 9px 0 35px;
@@ -1226,15 +1226,15 @@ footer.inner_page {
         width: 25%;
     }
     
-    .advantages_list_stripes.right {
+    .advantages_list .advantages_list_stripes.right {
         display: none;
     }
     
-    .advantages_list_stripes.left {
+    .advantages_list .advantages_list_stripes.left {
         left: 50%;
     }
     
-    .advantage_item_wr {
+    .advantages_list .advantage_item_wr {
         width: 100%;
         padding: 0;
     }
@@ -1396,7 +1396,7 @@ footer.inner_page {
         width: 100%;
     }
     
-    .advantage_item .advantage_item_caption_ {
+    .advantage_item_wr .advantage_item_caption {
         flex-direction: column;
     }
     
@@ -1404,7 +1404,7 @@ footer.inner_page {
         margin: auto auto 10px;
     }
     
-    .advantage_item .advantage_item_caption_text {
+    .advantage_item_wr .advantage_item_caption_text {
         text-align: center;
     }
 }
