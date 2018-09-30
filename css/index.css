@@ -952,56 +952,79 @@ footer .second_footer a {
 }
 
 .advantages_screen .advantages_list {
-    padding: 0 30px;
+    padding: 0 30px 100px;
+    position: relative;
+}
+
+.advantages_screen .bordered {
+    position: absolute;
+    background: rgb(255, 222, 0);
+    width: 10px;
+    height: 100%;
+}
+
+.advantages_screen .bordered.left {
+    left: 311px;
+}
+
+.advantages_screen .bordered.right {
+    right: 311px;
 }
 
 .advantages_screen .advantage_item_wr {
     width: 50%;
     box-sizing: border-box;
     padding: 0 60px;
-}
-
-.advantages_screen .bordered {
-    width: 50%;
-    height: 100px;
-    box-sizing: border-box;
-    border-right: 10px solid rgb(255, 222, 0);
+    margin-top: 100px;
+    position: relative;
+    background: #ffffff;
 }
 
 .advantages_screen .advantage_item {
-    background: url(../images/numbers.svg) no-repeat -200px -14px;
-    padding-top: 65px;
-    margin-top: 40px;
+    padding-top: 105px;
     line-height: 1.35;
     position: relative;
+    z-index: 2;  
 }
 
-.advantages_screen .advantage_item.two {
-    background-position: -638px -10px;
+.advantages_screen .number {
+    background: url(../images/numbers.svg) no-repeat -230px -7px;
+    width: 250px;
+    height: 284px;
+    position: absolute;
+    top: 33px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
 }
 
-.advantages_screen .advantage_item.three{
-    background-position: -1104px -10px;
+.advantages_screen .advantage_item_wr.two .number {
+    background-position: -696px -5px;
 }
 
-.advantages_screen .advantage_item.four {
-    background-position: -1567px -14px;
+.advantages_screen .advantage_item_wr.three .number{
+    background-position: -1158px -5px;
 }
 
-.advantages_screen .advantage_item.five {
-    background-position: -2039px -14px;
+.advantages_screen .advantage_item_wr.four .number {
+    background-position: -1625px -7px;
 }
 
-.advantages_screen .advantage_item.six {
-    background-position: -2503px -10px;
+.advantages_screen .advantage_item_wr.five .number {
+    background-position: -2087px -7px;
 }
 
-.advantages_screen .advantage_item.seven {
-    background-position: -2980px -14px;
+.advantages_screen .advantage_item_wr.six .number {
+    background-position: -2559px -5px;
 }
 
-.advantages_screen .advantage_item.eight {
-    background-position: -3437px -10px;
+.advantages_screen .advantage_item_wr.seven .number {
+    background-position: -3026px -7px;
+}
+
+.advantages_screen .advantage_item_wr.eight .number {
+    background-position: -3494px -5px;
 }
 
 .advantages_screen .advantage_item .flex {
@@ -1018,31 +1041,31 @@ footer .second_footer a {
     margin-right: 15px;
 }
 
-.advantages_screen .advantage_item.two .icon{
+.advantages_screen .advantage_item_wr.two .icon{
     background-position: -125px -283px;
 }
 
-.advantages_screen .advantage_item.three .icon{
+.advantages_screen .advantage_item_wr.three .icon{
     background-position: -243px -280px;
 }
 
-.advantages_screen .advantage_item.four .icon{
+.advantages_screen .advantage_item_wr.four .icon{
     background-position: -368px -283px;
 }
 
-.advantages_screen .advantage_item.five .icon{
+.advantages_screen .advantage_item_wr.five .icon{
     background-position: -494px -283px;
 }
 
-.advantages_screen .advantage_item.six .icon {
+.advantages_screen .advantage_item_wr.six .icon {
     background-position: -618px -283px;
 }
 
-.advantages_screen .advantage_item.seven .icon {
+.advantages_screen .advantage_item_wr.seven .icon {
     background-position: -744px -283px;
 }
 
-.advantages_screen .advantage_item.eight .icon {
+.advantages_screen .advantage_item_wr.eight .icon {
     background-position: -869px -283px;
 }
 
@@ -1182,6 +1205,19 @@ footer .second_footer a {
     .services_screen .service_group_wr {
         width: 25%;
     }
+    
+    .advantages_screen .advantage_item_wr {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .advantages_screen .bordered.right {
+        display: none;
+    }
+    
+    .advantages_screen .bordered.left {
+        left: 50%;
+    }
 
 }
 
@@ -1258,15 +1294,6 @@ footer .second_footer a {
     footer .form {
         margin: 0 auto;
     }
-    
-    .advantages_screen .advantage_item_wr {
-        width: 100%;
-        padding: 0;
-    }
-    
-    .advantages_screen .advantage_item_wr:nth-child(7n) .bordered:last-child {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -1336,6 +1363,10 @@ footer .second_footer a {
     .prices_screen .framed::after {
         border-right: 8px solid #ffde00;
         border-left: 8px solid #ffde00;
+    }
+    
+    .main_screen.advantages_page {
+        padding: 190px 0 44px;
     }
     
 }
