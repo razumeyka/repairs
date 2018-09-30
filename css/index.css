@@ -144,7 +144,7 @@ header .menu a {
 header .sub-menu {
     position: absolute;
     margin: 0;
-    padding: 0;
+    padding: 3px 0 0;
     top: 87px;
     left: 0;
     display: none;
@@ -556,6 +556,10 @@ header .phone_wr {
     margin-bottom: 16px;
 }
 
+.prices_screen .price_list .lines {
+    margin-bottom: 50px;
+}
+
 .prices_screen .price_list .line {
     box-sizing: border-box;
     border-bottom: 1px solid rgb(200, 200, 200);
@@ -686,15 +690,15 @@ header .phone_wr {
     padding: 35px 30px;
 }
 
-.small_caption {
+.services_screen .inner .small_caption {
     font: 600 32px "ProximaNovaExCn";
     text-align: center;
 }
 
-.description {
+.services_screen .inner .description {
     font-size: 18px;
     color: rgb(104, 104, 104);
-    margin: 9px 0 35px;
+    margin: 9px 0 32px;
     text-align: justify;
 }
 
@@ -940,38 +944,41 @@ footer .second_footer a {
     color: rgb(255, 255, 255);
 }
 
+/*advantages_page*/
+
 /*advantages_screen*/
 
-.main_screen.advantages_page {
+.main_screen.inner_page {
     padding: 136px 0 44px;
     text-align: center;
+    margin-bottom: 60px;
 }
 
-.advantages_screen {
-    padding: 60px 0 82px;
+.main_screen.inner_page .wrapper {
+    max-width: 1200px;
 }
 
-.advantages_screen .advantages_list {
+.advantages_list {
     padding: 0 30px 100px;
     position: relative;
 }
 
-.advantages_screen .bordered {
+.advantages_list .advantages_list_stripes  {
     position: absolute;
     background: rgb(255, 222, 0);
     width: 10px;
     height: 100%;
 }
 
-.advantages_screen .bordered.left {
+.advantages_list .advantages_list_stripes.left {
     left: 311px;
 }
 
-.advantages_screen .bordered.right {
+.advantages_list .advantages_list_stripes.right {
     right: 311px;
 }
 
-.advantages_screen .advantage_item_wr {
+.advantages_list .advantage_item_wr {
     width: 50%;
     box-sizing: border-box;
     padding: 0 60px;
@@ -980,14 +987,7 @@ footer .second_footer a {
     background: #ffffff;
 }
 
-.advantages_screen .advantage_item {
-    padding-top: 105px;
-    line-height: 1.35;
-    position: relative;
-    z-index: 2;  
-}
-
-.advantages_screen .number {
+.advantage_item_wr .advantage_item_number {
     background: url(../images/numbers.svg) no-repeat -230px -7px;
     width: 250px;
     height: 284px;
@@ -999,41 +999,49 @@ footer .second_footer a {
     z-index: 1;
 }
 
-.advantages_screen .advantage_item_wr.two .number {
+.advantage_item_wr.two .advantage_item_number {
     background-position: -696px -5px;
 }
 
-.advantages_screen .advantage_item_wr.three .number{
+.advantage_item_wr.three .advantage_item_number{
     background-position: -1158px -5px;
 }
 
-.advantages_screen .advantage_item_wr.four .number {
+.advantage_item_wr.four .advantage_item_number {
     background-position: -1625px -7px;
 }
 
-.advantages_screen .advantage_item_wr.five .number {
+.advantage_item_wr.five .advantage_item_number {
     background-position: -2087px -7px;
 }
 
-.advantages_screen .advantage_item_wr.six .number {
+.advantage_item_wr.six .advantage_item_number {
     background-position: -2559px -5px;
 }
 
-.advantages_screen .advantage_item_wr.seven .number {
+.advantage_item_wr.seven advantage_item_number {
     background-position: -3026px -7px;
 }
 
-.advantages_screen .advantage_item_wr.eight .number {
+.advantage_item_wr.eight .advantage_item_number {
     background-position: -3494px -5px;
 }
 
-.advantages_screen .advantage_item .flex {
+.advantage_item_wr .advantage_item {
+    padding-top: 105px;
+    line-height: 1.35;
     position: relative;
+    z-index: 2;  
+}
+
+.advantage_item .advantage_item_caption {
+    position: relative;
+    display: flex;
     flex-wrap: nowrap;
     margin-bottom: 15px;
 }
 
-.advantages_screen .advantage_item .icon {
+.advantage_item_wr .advantage_item_caption_icon {
     content: "";
 	background: url(../images/sprites.svg) no-repeat  -7px -283px;
 	width: 86px;
@@ -1041,38 +1049,50 @@ footer .second_footer a {
     margin-right: 15px;
 }
 
-.advantages_screen .advantage_item_wr.two .icon{
+.advantage_item_wr.two .advantage_item_caption_icon{
     background-position: -125px -283px;
 }
 
-.advantages_screen .advantage_item_wr.three .icon{
+.advantage_item_wr.three .advantage_item_caption_icon{
     background-position: -243px -280px;
 }
 
-.advantages_screen .advantage_item_wr.four .icon{
+.advantage_item_wr.four .advantage_item_caption_icon{
     background-position: -368px -283px;
 }
 
-.advantages_screen .advantage_item_wr.five .icon{
+.advantage_item_wr.five .advantage_item_caption_icon{
     background-position: -494px -283px;
 }
 
-.advantages_screen .advantage_item_wr.six .icon {
+.advantage_item_wr.six .advantage_item_caption_icon {
     background-position: -618px -283px;
 }
 
-.advantages_screen .advantage_item_wr.seven .icon {
+.advantage_item_wr.seven .advantage_item_caption_icon {
     background-position: -744px -283px;
 }
 
-.advantages_screen .advantage_item_wr.eight .icon {
+.advantage_item_wr.eight .advantage_item_caption_icon {
     background-position: -869px -283px;
 }
 
-.advantages_screen .advantage_item .small_caption {
+.advantage_item .advantage_item_caption_text {
+    font: 600 32px "ProximaNovaExCn";
     text-align: left;
     margin: auto 0;
     flex: 1;
+}
+
+.advantage_item .advantage_item_description {
+    font-size: 18px;
+    color: rgb(104, 104, 104);
+    margin: 9px 0 35px;
+    text-align: justify;
+}
+
+footer.inner_page {
+    margin-top: 80px;
 }
 
 /*media*/
@@ -1206,17 +1226,17 @@ footer .second_footer a {
         width: 25%;
     }
     
-    .advantages_screen .advantage_item_wr {
-        width: 100%;
-        padding: 0;
-    }
-    
-    .advantages_screen .bordered.right {
+    .advantages_list_stripes.right {
         display: none;
     }
     
-    .advantages_screen .bordered.left {
+    .advantages_list_stripes.left {
         left: 50%;
+    }
+    
+    .advantage_item_wr {
+        width: 100%;
+        padding: 0;
     }
 
 }
@@ -1365,7 +1385,7 @@ footer .second_footer a {
         border-left: 8px solid #ffde00;
     }
     
-    .main_screen.advantages_page {
+    .main_screen.inner_page  {
         padding: 190px 0 44px;
     }
     
@@ -1375,5 +1395,16 @@ footer .second_footer a {
     .services_screen .service_group_wr {
         width: 100%;
     }
-
+    
+    .advantage_item .advantage_item_caption_ {
+        flex-direction: column;
+    }
+    
+    .advantage_item_wr .advantage_item_caption_icon {
+        margin: auto auto 10px;
+    }
+    
+    .advantage_item .advantage_item_caption_text {
+        text-align: center;
+    }
 }
